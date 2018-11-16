@@ -106,7 +106,7 @@ class SelectedMoviesList extends Component {
                   })}
               </div>
 
-              {selectedMovies.length >= 1 && (
+              {selectedMovies.length >= 6 && (
                 <button
                   className="btn btn-info animated bounceIn"
                   onClick={this.onClickFind.bind(
