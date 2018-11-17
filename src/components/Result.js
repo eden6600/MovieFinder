@@ -40,10 +40,6 @@ class Result extends Component {
                         })}
                       </p>
                       <p className="card-text lead">{result.overview}</p>
-                      <a className="btn btn-info text-white">
-                        <i className="fab fa-imdb text-white mr-2" />
-                        IMDB Page
-                      </a>
                     </div>
                   </div>
                 </div>
