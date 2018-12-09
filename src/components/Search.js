@@ -51,7 +51,7 @@ class Search extends Component {
           return (
             <React.Fragment>
               <h1 className="display-4 text-center mb-2">
-                Find Yours Next Movie
+                Find Your Next Movie
               </h1>
               <p className="lead text-center">
                 Give us a list of yours favorite movies and we will find a movie
