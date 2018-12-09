@@ -14,7 +14,7 @@ class Result extends Component {
         {value => {
           const { result } = value;
 
-          if (Object.getOwnPropertyNames(result).length > 0) {
+          if (result) {
             return (
               <div className="card animated zoomIn">
                 <div className="row">

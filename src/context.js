@@ -46,6 +46,14 @@ const reducer = (state, action) => {
 
       return { ...state, result: action.payload };
 
+    case 'RESET':
+      return {
+        ...state,
+        selectedMovies: [],
+        recommendations: [],
+        result: null
+      };
+
     default:
       return state;
   }
@@ -55,7 +63,7 @@ export class Provider extends Component {
   state = {
     selectedMovies: [],
     recommendations: [],
-    result: {},
+    result: null,
     dispatch: action => this.setState(state => reducer(state, action))
   };
 

@@ -49,7 +49,7 @@ class SelectedMoviesList extends Component {
     return (
       <Consumer>
         {value => {
-          const { selectedMovies, dispatch, recommendations } = value;
+          const { selectedMovies, dispatch, recommendations, result } = value;
           const progressBarClassName =
             selectedMovies.length >= 6
               ? 'progress-bar bg-success'
@@ -106,7 +106,7 @@ class SelectedMoviesList extends Component {
                   })}
               </div>
 
-              {selectedMovies.length >= 6 && (
+              {selectedMovies.length >= 6 && !result ? (
                 <button
                   className="btn btn-info animated bounceIn"
                   onClick={this.onClickFind.bind(
@@ -117,9 +117,18 @@ class SelectedMoviesList extends Component {
                   )}
                 >
                   <i className="fas fa-search mr-2" />
-                  Find Movie
+                  {result ? 'Reset' : 'Find Movie'}
                 </button>
-              )}
+              ) : null}
+
+              {result ? (
+                <button
+                  className="btn btn-secondary btn-block"
+                  onClick={() => dispatch({ type: 'RESET' })}
+                >
+                  Rest
+                </button>
+              ) : null}
             </React.Fragment>
           );
         }}
